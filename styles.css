@@ -16,7 +16,7 @@ h1 {
 .calculator {
   display: flex;
   flex-flow: column nowrap;
-  min-width: 1000px;
+  min-width: 800px;
 }
 
 #textbox {
@@ -44,8 +44,8 @@ h1 {
 
 .item {
   flex-grow: 1;
-  flex-basis: 0;
-  padding: 0.5em;
+  width: 50%;
+  padding: 0.5em 0;
   text-align: center;
   font-size: 2em;
   background-color: #222427;
@@ -64,23 +64,37 @@ h1 {
 
 #top-row .item {
   padding: 0.5em;
-  flex-grow: 1;
-  flex-basis: 0;
+  width: 25%;
   text-align: center;
   font-size: 1em;
   background-color: #222427;
   border: 1px red solid;
 }
 
-#zero {
-  flex-grow: 2;
-}
-
-.item + .item {
+.item + .item,
+.last-item + .last-item {
   margin-left: 20px;
 }
 
-.history {
+#zero {
+  flex-shrink: 1;
+  width: 50%;
+  margin-right: 20px;
+}
+
+#two-row {
   display: flex;
-  flex-flow: column nowrap;
+  flex-shrink: 1;
+  flex-flow: row nowrap;
+  width: 50%;
+  border: 1px red solid;
+}
+
+.last-item {
+  padding: 0.5em;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  background-color: #222427;
+  border: 1px purple solid;
 }
