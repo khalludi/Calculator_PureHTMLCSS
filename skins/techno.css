@@ -1,0 +1,104 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.calculator {
+  display: flex;
+  flex-flow: column nowrap;
+  min-width: 800px;
+}
+
+#textbox {
+  text-align: right;
+  padding: 0.5em;
+  font-size: 2em;
+  border: 2px lightgreen solid;
+}
+
+.numbers {
+  display: flex;
+  flex-flow: column nowrap;
+  border: 2px blue solid;
+}
+
+.num-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0.5em 0;
+  padding: 0;
+  border: 1px green solid;
+  list-style-type: none;
+}
+
+.item {
+  flex-grow: 1;
+  width: 50%;
+  padding: 0.5em 0;
+  text-align: center;
+  font-size: 2em;
+  background-color: #222427;
+  border: 1px red solid;
+}
+
+#top-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0.5em 0;
+  padding: 0;
+  border: 1px green solid;
+  list-style-type: none;
+}
+
+#top-row .item {
+  padding: 0.5em;
+  width: 25%;
+  text-align: center;
+  font-size: 1em;
+  background-color: #222427;
+  border: 1px red solid;
+}
+
+.item + .item,
+.last-item + .last-item {
+  margin-left: 20px;
+}
+
+#zero {
+  flex-shrink: 1;
+  width: 50%;
+  margin-right: 20px;
+}
+
+#two-row {
+  display: flex;
+  flex-shrink: 1;
+  flex-flow: row nowrap;
+  width: 50%;
+  border: 1px red solid;
+}
+
+.last-item {
+  padding: 0.5em;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  background-color: #222427;
+  border: 1px purple solid;
+}
+
+.orange {
+  background-color: #ff9500;
+}
